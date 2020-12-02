@@ -50,9 +50,9 @@
     <div class="form-styles">
         <div class="inputs-block">
             <div class="input-nest adaptive-name"><i class="far fa-user-circle"></i> <input type="text" placeholder="Введите ваше имя"
-                                                                              class="simple-input"></div>
+                                                                              class="simple-input" name="name"></div>
             <div class="input-nest adaptive-mail"><i class="far fa-envelope"></i> <input type="email" placeholder="Действующий e-mail"
-                                                                           class="simple-input"></div>
+                                                                           class="simple-input" name="email"></div>
         </div>
 
         <button type="submit" class="submit-btn">ДА! Я ХОЧУ ПОЛУЧИТЬ VIP ДОСТУП К QUANTUM SYSTEM ПРЯМО СЕЙЧАС</button>
@@ -79,6 +79,21 @@
     <span class="copyright">Copyright &copy;2020 – Quantum System Management</span>
 </footer>
 
+<?php
+  $to      = 'usersnamers@gmail.com';
+  $subject = 'the subject';
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $message .= $name . ' ' . $email;
+
+  $headers = 'From: ' . $email . "\r\n" .
+    'Reply-To: usersnamers@gmail.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);
+
+?>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 <script>
     document.getElementById('btn').onclick = function () {
@@ -86,6 +101,7 @@
         document.getElementById('video').muted = false;
     }
 </script>
+
 
 </body>
 </html>
