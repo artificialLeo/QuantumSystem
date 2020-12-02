@@ -1,0 +1,362 @@
+body {
+    width: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+header, footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #111b26;
+}
+
+footer {
+    flex-direction: column;
+    height: 90px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 230px;
+    /*margin-left: 200px;*/
+}
+
+.header-text {
+    color: #17d4fb;
+    width: 45%;
+    font-size: 24px;
+    margin-right: 10%;
+}
+
+.header-dash, .footer-dash {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #66717e;
+}
+
+.footer-dash {
+    top: 0;
+}
+
+.video-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    overflow: hidden;
+}
+
+.quantum-presentation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.voice-mute {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 2;
+    border-radius: 5px;
+    animation: example 1s infinite;
+}
+
+.voice-mute:hover {
+    cursor: pointer;
+}
+
+@keyframes example {
+    from {transform: scale(1.0)}
+    50% {transform: scale(1.3)}
+    to {transform: scale(1.0)}
+}
+
+.fa-volume-mute {
+    font-size: 96px;
+    color: white;
+}
+
+.voice-lbl {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.video-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    background: url("../img/bgc.jpg") no-repeat center center;
+}
+
+.form-styles {
+    margin-top: 50px;
+}
+
+.partners-logo {
+    margin-top: 75px;
+    margin-bottom: 50px;
+}
+
+.partner {
+    margin-left: 10px;
+}
+
+.contact, .copyright {
+    color: white;
+    font-size: 14px;
+}
+
+.contact {
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.contact:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+
+    padding: 15px;
+    background-color: #00ce00;
+    border: 0;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 800;
+    outline-color: orange;
+}
+
+.inputs-block {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+
+.input-nest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    width: 350px;
+    background-color: #d1d1d1;
+    border-radius: 5px;
+    border: 1px solid #999999;
+    outline: none;
+}
+
+.simple-input {
+    position: absolute;
+    right: 0;
+    border: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 48px;
+    width: 300px;
+    text-indent: 10px;
+}
+
+.simple-input::placeholder {
+    color: #999999;
+}
+
+.simple-input:focus {
+    border-color: rgba(58, 113, 239, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(25, 13, 239, 0.6);
+    outline: 0 none;
+}
+
+.fa-envelope, .fa-user-circle {
+    color: #999999;
+    font-size: 22px;
+    margin-left: 3.2%;
+}
+
+.dn {
+    display: none !important;
+}
+
+.left-drop-wrapper{
+    position: fixed;
+    display: flex;
+    bottom: 5px;
+    left: 5px;
+    z-index: 3;
+}
+
+.left-drop, .right-drop {
+    border: 5px solid #17d4fb;
+    width: 60px;
+    height: 60px;
+
+    transform: rotate(135deg);
+    border-radius: 60px 0px 60px 60px;
+    background-color: #2f3a4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-drop-p, .right-drop-p {
+    position: relative;
+    border: 2px dashed #17d4fb;
+    color: white;
+    border-radius: 5px;
+    width: 120px;
+    font-size: 18px;
+    right: 15px;
+    padding-left: 15px;
+    z-index: -1;
+    bottom: 5px;
+    text-transform: uppercase;
+}
+
+.people, .places {
+    color: #17d4fb;
+    transform: rotate(-135deg);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.places {
+    color: #11cc1a;
+}
+
+.right-drop-wrapper {
+    position: fixed;
+    display: flex;
+    bottom: 5px;
+    right: 5px;
+    z-index: 3;
+}
+
+.right-drop {
+    border-color: #11cc1a;
+}
+
+.right-drop-p {
+    left: 15px;
+    box-sizing: border-box;
+    margin-left: 15px;
+    border-color: #11cc1a;
+    padding-left: 5px;
+    width: 140px;
+
+}
+
+.contacts {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo, .header-text {
+        margin: 0;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .inputs-block {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80%;
+        height: 50px;
+    }
+
+    .input-nest {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        height: 50px;
+        width: 100%;
+        background-color: #d1d1d1;
+        border-radius: 5px;
+        border: 1px solid #999999;
+        outline: none;
+    }
+
+    .simple-input {
+        width: 94%;
+    }
+
+    .right-drop-wrapper, .left-drop-wrapper {
+        display: none;
+    }
+
+    .adaptive-mail {
+        top: 12px;
+    }
+
+    .fa-user-circle, .fa-envelope {
+        margin-left: -1.45%;
+        padding: 14px;
+    }
+
+    .submit-btn {
+        position: relative;
+        top: 50px;
+        width: 80.5%;
+        border-radius: 5px;
+    }
+
+    .form-styles {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+}
+
+@media only screen and (max-width: 620px) {
+    .fa-user-circle, .fa-envelope {
+        margin-left: -3.4%;
+        padding: 14px;
+    }
+
+    .partners-logo, .contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .partner {
+        object-fit: contain;
+    }
+
+    .contacts {
+        text-align: center;
+    }
+
+    .contact, .copyright {
+        margin-top: 5px;
+    }
+
+    footer {
+        height: 110px;
+    }
+}

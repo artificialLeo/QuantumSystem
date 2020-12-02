@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Добро пожаловать!</title>
+</head>
+<body>
+
+<header>
+    <img src="./img/mainLogo.png" alt="quantum logo" class="logo">
+    <h3 class="header-text">Посмотрите это видео и узнайте, как зарабатывать более $630,820 каждый месяц!</h3>
+    <div class="header-dash"></div>
+</header>
+
+<div class="left-drop-wrapper">
+    <div class="left-drop">
+        <span class="people">111</span>
+    </div>
+    <p class="left-drop-p">
+        <span style="color: #17d4fb">Человек</span> на странице
+    </p>
+</div>
+
+<div class="right-drop-wrapper">
+
+    <p class="right-drop-p">
+        <span style="color: #11cc1a">Свободных </span> мест
+    </p>
+    <div class="right-drop">
+        <span class="places">111</span>
+    </div>
+</div>
+
+<section class="video-section">
+
+    <div class="video-wrapper">
+        <div class="voice-mute" id="btn">
+            <i class="fas fa-volume-mute"></i>
+            <p class="voice-lbl">Включить звук</p>
+        </div>
+        <video class="quantum-presentation" autoplay muted id="video">
+            <source src="img/videoplayback.mp4">
+        </video>
+    </div>
+
+    <div class="form-styles">
+        <div class="inputs-block">
+            <div class="input-nest adaptive-name"><i class="far fa-user-circle"></i> <input type="text" placeholder="Введите ваше имя"
+                                                                              class="simple-input"></div>
+            <div class="input-nest adaptive-mail"><i class="far fa-envelope"></i> <input type="email" placeholder="Действующий e-mail"
+                                                                           class="simple-input"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">ДА! Я ХОЧУ ПОЛУЧИТЬ VIP ДОСТУП К QUANTUM SYSTEM ПРЯМО СЕЙЧАС</button>
+    </div>
+
+    <div class="partners-logo">
+        <img src="./img/speedTrade.png" alt="logo" class="partner">
+        <img src="./img/mcAfee.png" alt="logo" class="partner">
+        <img src="./img/geoTrust.png" alt="logo" class="partner">
+        <img src="./img/verisign.png" alt="logo" class="partner">
+        <img src="./img/symantec.png" alt="logo" class="partner">
+    </div>
+</section>
+
+<footer>
+    <div class="footer-dash"></div>
+
+    <div class="contacts">
+        <a href="mailto:еvgeny@quantumsys.ru" class="contact">Контакты</a>
+        <a href="https://quantumsys.ru/Policy.php" target="_blank" class="contact">Политика конфиденциальности</a>
+        <a href="https://quantumsys.ru/Agreement.php" target="_blank" class="contact">Пользовательское соглашение</a>
+    </div>
+
+    <span class="copyright">Copyright &copy;2020 – Quantum System Management</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+<script>
+    document.getElementById('btn').onclick = function () {
+        this.classList.add('dn');
+        document.getElementById('video').muted = false;
+    }
+</script>
+
+</body>
+</html>
